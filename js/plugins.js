@@ -38,7 +38,11 @@ $(document).on('click', 'a[href^="#"]', function(event) {
 });
 
 /*========== BOUNCING DOWN ARROW ==========*/
-
+$(document).ready(function() {
+    $(Window).scroll(function() {
+        $('.arrow').css('opacity', 1 - $(window).scrollTop() / 250);
+    });
+});
 
 /*========== LIGHTBOX IMAGE GALLERY ==========*/
 
